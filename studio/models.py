@@ -47,7 +47,7 @@ class DanceClass(models.Model):
     is_private = models.BooleanField()
 
     def __str__(self):
-        return self.name 
+        return self.dance_type
 
 class JoinClassesAndStudents(models.Model):
     class_id = models.ForeignKey(DanceClass, on_delete=models.CASCADE)
