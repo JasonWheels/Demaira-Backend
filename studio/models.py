@@ -4,7 +4,7 @@ from django.utils import timezone
 class School(models.Model):
     name = models.CharField(max_length=255)
     email = models.EmailField()
-    address = models.CharField(max_length=255)
+    address = models.TextField()
     phone_number = models.IntegerField()
     regular_class_price = models.DecimalField(max_digits=5, decimal_places=2)
     private_class_price = models.DecimalField(max_digits=5, decimal_places=2)
@@ -31,7 +31,7 @@ class Teacher(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     email = models.EmailField()
-    address = models.CharField(max_length=255)
+    address = models.TextField()
     phone_number = models.IntegerField()
     hourly_wage = models.DecimalField(max_digits=5, decimal_places=2)
 
