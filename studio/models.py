@@ -24,7 +24,7 @@ class Student(models.Model):
     join_date = models.DateField()
 
     def __str__(self):
-        return self.title
+        return self.student_first_name
 
 class Teacher(models.Model):
     school_id = models.ForeignKey(School, on_delete=models.CASCADE)
