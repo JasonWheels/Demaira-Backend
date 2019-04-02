@@ -36,7 +36,7 @@ class Teacher(models.Model):
     hourly_wage = models.DecimalField(max_digits=5, decimal_places=2)
 
     def __str__(self):
-        return self.name 
+        return self.first_name 
 
 class DanceClass(models.Model):
     school_id = models.ForeignKey(School, on_delete=models.CASCADE)
@@ -49,8 +49,8 @@ class DanceClass(models.Model):
     def __str__(self):
         return self.name 
 
-class JoinTeacherStudent(models.Model):
-    teacher_id: models.ForeignKey(Teacher, on_delete=models.CASCADE)
+class JoinClassesAndStudents(models.Model):
+    class_id: models.ForeignKey(DanceClass, on_delete=models.CASCADE)
     student_id: models.ForeignKey(Student, on_delete=models.CASCADE)
 
 # class ContactInfor(models.Model): 
