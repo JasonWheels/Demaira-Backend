@@ -50,7 +50,7 @@ class DanceClass(models.Model):
         return self.name 
 
 class JoinClassesAndStudents(models.Model):
-    class_id: models.ForeignKey(DanceClass, on_delete=models.CASCADE)
-    student_id: models.ForeignKey(Student, on_delete=models.CASCADE)
+    class_id = models.ForeignKey(DanceClass, on_delete=models.CASCADE)
+    student_id = models.ForeignKey(Student, on_delete=models.CASCADE)
 
 # class ContactInfor(models.Model): 
